@@ -28,10 +28,11 @@ public class GunController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (isFiring)
+		shotCounter -= Time.deltaTime;
+		if (shotCounter <= 0)
         {
-            shotCounter -= Time.deltaTime;
-            if (shotCounter <= 0)
+            
+			if (isFiring) 
             {
                 //var rotation = new Quaternion(firePoint.rotation.x, firePoint.rotation.y, firePoint.rotation.z, firePoint.rotation.w);
                 shotCounterReset();
@@ -42,10 +43,10 @@ public class GunController : MonoBehaviour
                 newBullet.bulletSpeed = bulletSpeed;
             }
         }
-        else
-        {
-            shotCounter = 0;
-        }
+        //else
+        //{
+        //    shotCounter = 0;
+        //}
     } // Update()
 
     void shotCounterReset()

@@ -1,4 +1,4 @@
 sceneSetups:
-- path: Assets/Scenes/Gun_Testing.unity
+- path: Assets/Scenes/Grid_Testing.unity
   isLoaded: 1
   isActive: 1
